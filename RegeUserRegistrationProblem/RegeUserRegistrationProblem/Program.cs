@@ -1,4 +1,7 @@
-﻿namespace RegeUserRegistrationProblem
+﻿using System.Diagnostics.Metrics;
+using System.Reflection;
+
+namespace RegeUserRegistrationProblem
 {
     internal class Program
     {
@@ -33,6 +36,36 @@
             else
             {
                 Console.WriteLine("Invalid Name");
+            }
+
+
+            Console.WriteLine("Enter the Email");
+            String email = Console.ReadLine();
+
+            if (UserDetailCheck.ValidateEmail(email))
+            {
+                Console.WriteLine("Valid email");
+            }
+            else
+            {
+                Console.WriteLine("Invalid email");
+            }
+            /*
+            As a User need to
+            follow pre- defined Mobile Format 
+                -E.g. 91 9919819801 
+                - Country code follow by space and 10 digit number
+            */
+            Console.Write("Enter The Mobile Number : ");
+            String number = Console.ReadLine();
+
+            if (UserDetailCheck.ValidateMobileNo(number))
+            {
+                Console.WriteLine("Valid Number");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Number");
             }
         }
     }
