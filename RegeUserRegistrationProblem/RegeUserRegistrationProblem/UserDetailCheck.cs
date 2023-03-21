@@ -34,7 +34,7 @@ namespace RegeUserRegistrationProblem
             - E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc, bl& co) and 2 optional (xyz & in) with
                 precise @ and . positions
          */
-        public static string Emailreg = "^[A-Za-z0-9]{3,}([.][a-zA-z]+)?[@][A-Za-z]+[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";;
+        public static string Emailreg = "^[A-Za-z0-9]{3,}([.][a-zA-z]+)?[@][A-Za-z]+[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
 
         public static bool ValidateEmail(String word)
         {
